@@ -1,0 +1,40 @@
+{
+  "name": "@web-components/qrcode",
+  "private": true,
+  "version": "0.0.0-alpha.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "build:example": "tsc && vite build",
+    "build:lib": "tsc && vite build --config ./vite-lib.config.ts",
+    "build": "npm run build:lib && npm run build:example"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "readline": "^1.3.0",
+    "sass": "^1.77.8",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "3.7.3",
+    "vite-plugin-lib-inject-css": "^2.1.1"
+  },
+  "author": "wuyuedefeng",
+  "description": "",
+  "homepage": "",
+  "types": "./dist/qrcode.d.ts",
+  "main": "./dist/qrcode.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/qrcode.es.js",
+      "require": "./dist/qrcode.umd.js"
+    }
+  },
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "dyn-components": "^0.0.5",
+    "qrcode": "^1.5.4"
+  }
+}
